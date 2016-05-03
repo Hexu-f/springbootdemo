@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="MessageInfoMapper">
+    <resultMap type="com.hexu.springboottest.model.MessageInfo" id="MessageInfo">
+        <id column="MessageId" property="messageId" />
+        <result column="MessageTitle" property="messageTitle" />
+        <result column="Content" property="content" />
+        <result column="UserId" property="userId" />
+        <result column="UserName" property="userName" />
+        <result column="MessageDate" property="messageDate" />
+        <result column="MessageType" property="messageType" />
+        <result column="Sid" property="sid" />
+    </resultMap>
+
+    <select id="getAllMessage" resultMap="MessageInfo">
+        SELECT * FROM T_Message_Info
+    </select>
+
+</mapper>
