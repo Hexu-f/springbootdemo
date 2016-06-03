@@ -1,13 +1,10 @@
 package com.hexu.springboottest;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by Hexu on 2016/5/3.
+ * Created by hexu on 2016/6/3.
  */
 
 //@Configuration
