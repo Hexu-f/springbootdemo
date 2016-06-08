@@ -8,15 +8,15 @@ import java.lang.reflect.Method;
  */
 public class ProxyUtil implements InvocationHandler {
 
-    private Object target;
+        private Object target;
 
-    @Override
-    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("do sth before....");
-        Object result =  method.invoke(target, args);
-        System.out.println("do sth after....");
-        return result;
-    }
+        @Override
+        public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+            System.out.println("do sth before....");
+            Object result =  method.invoke(target, args);
+            System.out.println("do sth after....");
+            return result;
+        }
 
     public ProxyUtil(Object target){
         this.target=target;
