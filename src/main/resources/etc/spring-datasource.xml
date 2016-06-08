@@ -22,7 +22,8 @@
 
     <!--配置数据源  -->
     <bean id="dataSource"
-          class="com.alibaba.druid.pool.DruidDataSource">
+          class="com.alibaba.druid.pool.DruidDataSource" init-method="init">
+          <!--class="com.alibaba.druid.pool.DruidDataSource" >-->
           <!--class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
 
         <property name="driverClassName">
@@ -53,17 +54,9 @@
         <property name="filters" value="stat,wall,log4j" />
         <property name="connectionProperties" value="druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000" />
 
-        <!--合并多个数据源的监控-->
         <property name="useGlobalDataSourceStat" value="true" />
 
 
-        <!--<property name="validationQuery" value="SELECT 1" />
-        <property name="testOnBorrow" value="false" />
-        <property name="testOnReturn" value="false" />
-        <property name="testWhileIdle" value="false" />
-        <property name="timeBetweenEvictionRunsMillis" value="1800000" />
-        <property name="minEvictableIdleTimeMillis" value="1800000" />
-        <property name="defaultAutoCommit" value="false" />-->
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
