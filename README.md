@@ -11,3 +11,5 @@
 加入了PageHelper
 
 加入了Generator
+
+添加jersey依赖，并配置restful接口
